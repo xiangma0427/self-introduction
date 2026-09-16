@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>個人網頁</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="card">
+        <!-- 姓名 (頁首) -->
+        <header>
+            <h1>馬振翔</h1>
+        </header>
+
+        <!-- 個人照片 -->
+        <div class="photo-container">
+            <img src="profile.jpg" alt="個人照片" class="profile-img">
+        </div>
+
+        <!-- 自我介紹 -->
+        <section class="intro">
+            <h2>關於我</h2>
+            <p>你好！我是新加入iir lab的成員,很高興認識大家!</p>
+        </section>
+
+        <!-- 興趣或專長 (清單) -->
+        <section class="skills">
+            <h2>興趣與專長</h2>
+            <ul>
+                <li>🏀 打籃球</li>
+                <li>🎮 打電動</li>
+            </ul>
+        </section>
+
+        <!-- 外部連結 -->
+        <section class="links">
+            <h2>社群連結</h2>
+            <a href="https://github.com/xiangma0427" target="_blank" class="btn">GitHub</a>
+        </section>
+
+        <!-- 互動按鈕 (呼叫 JS) -->
+        <div class="action">
+            <button onclick="sayWelcome()">點我打招呼</button>
+        </div>
+    </div>
+</body>
+</html>

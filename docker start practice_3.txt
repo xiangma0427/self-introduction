@@ -1,0 +1,26 @@
+docker start practice_3
+docker exec -it practice_3 bash
+jupyter notebook --allow-root --ip=0.0.0.0
+
+
+(Image) 操作指令
+docker pull <image>：從 Docker Hub 下載官方或社群的映像檔（如 python）。  
+docker images：列出目前本機已經下載的所有映像檔。  
+docker rmi <image>：刪除指定的映像檔。 
+
+(Container) 基礎操作指令
+docker ps：查看目前「正在執行中」的容器。  
+docker ps -a：查看「所有」容器（包含已停止運行的容器）。  
+docker start <container>：啟動已停止的容器。  
+docker stop <container>：停止正在執行的容器。  
+docker rm <container>：刪除指定容器。  
+docker exec -it <container> bash：進入正在執行的容器內部，開一個 Bash 終端機進行操作。
+
+(docker run)
+docker run -dit --name <container_name> -v <本機路徑>:<容器路徑> -p <本機Port>:<容器Port> <映像檔名稱> <執行命令>
+
+-d：在背景執行
+-it：提供互動式介面
+--name <container_name>
+-v <local>:<container>：目錄掛載 (Volume)，讓本機與容器資料同步，解決容器刪除後資料遺失問題。
+-p <local>:<container>：連接埠映射 (Port forwarding)，讓外部/本機瀏覽器可以存取容器內部的服務（如 8888:8888 跑 Jupyter Notebook）。
